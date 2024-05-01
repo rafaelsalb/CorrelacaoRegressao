@@ -7,12 +7,24 @@ src <- data.frame(
 )
 
 # a
+print("A")
 png("..\\out\\2.png")
 scatter(src)
 dev.off()
 
+# b
+print("B")
+modelo <- lm(Rendimento ~ Temperatura, data=src)
+print(modelo)
+
 # c
+print("C")
 modelo <- lm(Rendimento ~ Temperatura, data=src)
 sumario <- summary(modelo)$r.squared
 print("Coeficiente de determinação")
 print(sumario)
+
+# d
+print("D")
+est <- predict(modelo, data.frame(Temperatura = 155))
+print(est)

@@ -6,10 +6,14 @@ src <- data.frame(
     Melhor_Supino = c(55, 67.5, 72.5, 82.5, 70, 77.5, 100, 95, 85, 105, 95, 70, 90, 47.5, 65, 100, 72.5, 55, 57.5, 57.5)
 )
 
-# a, b
+# a
 png("..\\out\\5.png")
 scatter(src)
 dev.off()
+
+# b
+modelo <- lm(Melhor_Supino ~ Peso_Corporal, data=src)
+print(modelo)
 
 # c
 modelo <- lm(Melhor_Supino ~ Peso_Corporal, data=src)
@@ -27,8 +31,8 @@ med <- measures(src, mean, "Média")
 medi <- measures(src, median, "Mediana")
 
 mode <- function(v) {
-   uniqv <- unique(v)
-   uniqv[which.max(tabulate(match(v, uniqv)))]
+  uniqv <- unique(v)
+  uniqv[which.max(tabulate(match(v, uniqv)))]
 }
 moda <- measures(src, mode, "Moda")
 vari <- measures(src, var, "Variância")

@@ -1,0 +1,8 @@
+graphs/*
+sources/DadosSaeb.xlsx
+out/*
+*.log
+*.aux
+*.gz
+*.synctex(busy)
+av2.pdf

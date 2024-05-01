@@ -6,10 +6,14 @@ src <- data.frame(
     IBM = c(-0.7, -2, -5.5, 4.7, 1.8, 4.1, 2.6, 2, -1.3, 5.5)
 )
 
-# a, b
+# a
 png("..\\out\\3.png")
 scatter(src)
 dev.off()
+
+# b
+modelo <- lm(IBM ~ SandP, data=src)
+print(modelo)
 
 # c
 modelo <- lm(IBM ~ SandP, data=src)

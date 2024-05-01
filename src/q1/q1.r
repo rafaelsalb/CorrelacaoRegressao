@@ -7,13 +7,17 @@ src <- data.frame(
 )
 
 # a, b
+print("A e B")
 png("..\\out\\1.png")
 scatter(src)
 dev.off()
 
 # c
+print("C")
 corr <- cor(src["Volume_Trafego"], src["Velocidade_Media"])
 print("Coeficiente de correlação")
 print(corr)
 
 # d
+print("D")
+print("Sim. Existe uma relação linear entre as variáveis, então pode-se prever a velocidade média para um volume de tráfego de n veículos.")

@@ -1,0 +1,196 @@
+\documentclass[17pt]{extarticle}
+
+\usepackage[utf8x]{inputenc}
+\usepackage{listings}
+\usepackage{color}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{url}
+\graphicspath{{graphs/}}
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+
+\lstset{
+    frame=tb,
+    language=R,
+    aboveskip=3mm,
+    belowskip=3mm,
+    showstringspaces=false,
+    columns=flexible,
+    basicstyle={\small\ttfamily},
+    numbers=none,
+    numberstyle=\tiny\color{gray},
+    keywordstyle=\color{blue},
+    commentstyle=\color{dkgreen},
+    stringstyle=\color{mauve},
+    breaklines=true,
+    breakatwhitespace=true,
+    tabsize=4,
+    basicstyle=\tiny
+}
+
+\title{AV2}
+\author{Rafael da Silva Albuquerque}
+\date{05.2024}
+
+\begin{document}
+
+\begin{figure}[t]
+    \centering
+    \includegraphics[width=0.5\linewidth]{doc/unifor-logo.png}
+    \label{fig:my_label}
+\end{figure}
+\maketitle
+
+\newpage
+\section{Questão 1}
+\subsection{A) Faça o diagrama de dispersão dos dados}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\linewidth]{out/1.png}
+    \label{fig:my_label}
+\end{figure}
+
+\subsection{B) Estime a reta de regressão que representa os dados}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\linewidth]{out/1.png}
+    \label{fig:my_label}
+\end{figure}
+
+\subsection{C) Determine o coeficiente de correlação}
+-0.9090927
+
+\subsection{D) Você acha que conhecer o volume de tráfego é útil para prever a velocidade média? Justifique.}
+Sim. Existe uma relação linear entre as variáveis, então pode-se prever a velocidade média para qualquer volume de tráfego.
+
+\section{Questão 2}
+\subsection{A) Faça o diagrama de dispersão dos dados}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\linewidth]{out/2.png}
+    \label{fig:my_label}
+\end{figure}
+
+\subsection{B) Encontre a equação do rendimento em função da temperatura}
+\[ rendimento = -3.2788 + 0.4861 * temperatura \]
+
+\subsection{C) Determine o coeficiente de determinação}
+\[ 0.9946433 \]
+
+\subsection{D) Qual seria o valor estimado de rendimento para uma temperatura de 155 C°?}
+\[ 72.06061 \% \]
+
+\section{Questão 3}
+\subsection{A) Faça o diagrama de dispersão dos dados}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\linewidth]{out/3.png}
+    \label{fig:my_label}
+\end{figure}
+
+\subsection{B) Estime a equação de regressão}
+\[ IBM = 0.2747 + 0.9498 \]
+
+\subsection{C) Determine o coeficiente de determinação}
+\[ 0.4695189 \]
+
+\subsection{D) Determine o coeficiente de correlação}
+\[ 0.6852145 \]
+
+\subsection{E) Determine as medidas de posição e dispersão.}
+Média \\
+\[ SandP = 0.89 \] \\
+\[ IBM = 1.12 \] \\
+Mediana \\
+\[ SandP = 1.2 \] \\
+\[ IBM = 1.9 \] \\
+Moda \\
+\[ SandP = 1.2\] \\
+\[ IBM = -0.7 \] \\
+Variância \\ 
+\[ SandP = 6.189889 \] \\
+\[ IBM = 11.89289 \] \\
+Desvio Padrão \\ 
+\[ SandP = 2.487949 \] \\
+\[ IBM = 3.448607 \] \\
+Coeficiente de variação \\
+\[ SandP = 279.5448 \] \\
+\[ IBM = 307.9113 \] \\
+
+\subsection{F) Determine o diagrama Boxplot.}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\linewidth]{out/3_box_SandP.png}
+    \label{fig:my_label}
+\end{figure}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\linewidth]{out/3_box_IBM.png}
+    \label{fig:my_label}
+\end{figure}
+
+\section{Questão 5}
+\subsection{A) Faça o diagrama de dispersão dos dados}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\linewidth]{out/5.png}
+    \label{fig:my_label}
+\end{figure}
+
+\subsection{B) Estime a equação de regressão}
+\[ Melhor_Supino = 38.0428 + 0.5228 * Peso_Corporal \]
+
+\subsection{C) Determine o coeficiente de determinação}
+\[ 0.224823 \]
+
+\subsection{D) Determine o coeficiente de correlação}
+\[ 0.474155 \]
+
+\subsection{E) Determine as medidas de posição e dispersão.}
+Média \\
+\[ Peso_Corporal = 72.605 \]
+\[ Melhor_Supino = 76 \]
+
+Mediana \\
+\[ Peso_Corporal = 72.95 \]
+\[ Melhor_Supino = 72.5 \]
+
+Moda \\
+\[ Peso_Corporal = 59.8 \]
+\[ Melhor_Supino = 55 \]
+
+Variância \\
+\[ Peso_Corporal = 246.9942 \]
+\[ Melhor_Supino = 300.2632 \]
+
+Desvio Padrão \\
+\[ Peso_Corporal = 15.71605 \]
+\[ Melhor_Supino = 17.3281 \]
+
+Coeficiente de variação \\
+\[ Peso_Corporal = 21.64596 \]
+\[ Melhor_Supino = 22.80014 \]
+
+\subsection{F) Determine o diagrama Boxplot.}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\linewidth]{out/5_box_Peso.png}
+    \label{fig:my_label}
+\end{figure}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\linewidth]{out/5_box_Supino.png}
+    \label{fig:my_label}
+\end{figure}
+
+\newpage
+\section{Referências bibliográficas}
+\url{https://www.cmor-faculty.rice.edu/~heinken/latex/symbols.pdf} \\
+\url{https://r-graph-gallery.com/} \\
+\url{https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://www.tug.org/FontCatalogue/&ved=2ahUKEwiR6I2H54CFAxU7r5UCHZcgAdYQFnoECCQQAQ&usg=AOvVaw33L7IWJzzL53rkS-4ZK6KJ} \\
+\url{https://www.overleaf.com/learn}
+\url{https://www.baeldung.com/cs/latex-show-url}
+
+\end{document}
